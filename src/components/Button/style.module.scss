@@ -1,0 +1,13 @@
+@import '../../variables/variables.module.scss';
+.button {
+  width: 260px;
+  height: 75px;
+  background-color: var(--colorBlack);
+  border-radius: 6px;
+  color: var(--colorWhite);
+  cursor: pointer;
+  &:hover {
+    background-color: var(--colorOrange);
+    transition: 1s;
+  }
+}

@@ -1,0 +1,17 @@
+$desctop: 1530px;
+$fontStyle: normal;
+
+@mixin font($size, $weight, $family: Manrope) {
+  font-size: #{$size + px};
+  font-weight: $weight;
+  // font-style: $style;
+  font-family: $family;
+  line-height: 130%;
+}
+
+:root {
+  --colorYellow: #eef2d1;
+  --colorBlack: rgb(30, 30, 30);
+  --colorOrange: orange;
+  --colorWhite: white;
+}

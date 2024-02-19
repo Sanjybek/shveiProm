@@ -1,0 +1,27 @@
+@import '../../variables/variables.module.scss';
+
+.container {
+  max-width: $desctop;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+.footer {
+  // padding-top: 30px;
+  margin-top: 60px;
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: end;
+    align-items: end;
+  }
+  &__location_tel {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    @include font(24, 500);
+  }
+}
