@@ -1,25 +1,24 @@
-import React from 'react';
-import style from './style.module.scss';
+import './style.scss';
 import image1 from '../../picture/image1.png';
 import image2 from '../../picture/image2.png';
 import image3 from '../../picture/image3.png';
 import image4 from '../../picture/image4.png';
 
 const Picture = () => {
+  const images: string[] = [image1, image2, image3, image4];
   return (
     <section id="Каталог">
-      <div className={style.container}>
-        <div className={style.pictures}>
-          <h3 className={style.pictures__title}>Каталог</h3>
-          <div className={style.pictures__grid}>
-            <div className={style.pictures__block}>
-              <img className={style.picture} src={image1} alt="" />
+      <div className="container">
+        <div className="pictures">
+          <h3 className="pictures__title">Каталог</h3>
+          <div className="pictures__grid">
+            <div className="pictures__block">
+              <img className="picture" src={image1} alt="" />
             </div>
-            <div className={style.pictures__grid}>
-              <img className={style.picture_2} src={image2} alt="" />
-              <img className={style.picture_2} src={image3} alt="" />
-              <img className={style.picture_2} src={image4} alt="" />
-              <img className={style.picture_2} src={image1} alt="" />
+            <div className="pictures__grid">
+              {images.map((image, index) => (
+                <img key={index} className="picture_2" src={image} alt="" />
+              ))}
             </div>
           </div>
         </div>

@@ -1,14 +1,13 @@
-import React from 'react';
-import style from './style.module.scss';
-import Button from '../Button';
+import { Button } from '../Button';
+import './style.scss';
 const Block = () => {
   return (
-    <section className={style.section}>
-      <div className={style.container}>
-        <div className={style.block}>
-          <div className={style.block__texts}>
-            <h4 className={style.block__title}>Закажите у нас </h4>
-            <p className={style.block__text}>
+    <section className="section__block">
+      <div className="container">
+        <div className="block1">
+          <div className="block1__texts">
+            <h4 className="block1__title">Закажите у нас </h4>
+            <p className="block1__text">
               Shvei prom - Швейная фабрика для производства брюк — это современное предприятие, специализирующееся на
               создании высококачественной одежды для мужчин, женщин и детей.
             </p>

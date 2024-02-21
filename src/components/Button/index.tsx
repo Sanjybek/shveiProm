@@ -1,7 +1,5 @@
-import style from './style.module.scss';
+import './style.scss';
 
-const Button = () => {
-  return <button className={style.button}>Связаться</button>;
+export const Button = () => {
+  return <button className="button">Связаться</button>;
 };
-
-export default Button;

@@ -1,0 +1,70 @@
+@import '../../variables/variables.scss';
+.headers {
+  height: 110px;
+}
+
+.container {
+  max-width: $desctop;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  height: 119px;
+  &__block {
+    display: flex;
+    gap: 45px;
+  }
+  &__link {
+    @include font(22, 500);
+  }
+}
+@media (max-width: $tablet992) {
+  .headers {
+    height: 90px;
+  }
+  .container {
+    max-width: $tablet930;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: 119px;
+    &__block {
+      display: flex;
+      gap: 45px;
+    }
+    &__link {
+      @include font(20, 500);
+    }
+  }
+}
+
+@media (max-width: $tablet768) {
+  .container {
+    max-width: $tablet768;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: 119px;
+    &__block {
+      display: flex;
+      gap: 20px;
+    }
+    &__link {
+      @include font(20, 500);
+    }
+    &__icon {
+      width: 130px;
+    }
+  }
+}

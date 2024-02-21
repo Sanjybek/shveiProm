@@ -1,12 +1,19 @@
-$desctop: 1530px;
+$desctop: 1520px;
+$desctop1200: 1200px;
+$desctop1180: 1160px;
+
+$tablet992: 992px;
+$tablet930: 930px;
+
+$tablet768: 768px;
+$tablet740: 740px;
+
 $fontStyle: normal;
 
 @mixin font($size, $weight, $family: Manrope) {
   font-size: #{$size + px};
   font-weight: $weight;
-  // font-style: $style;
   font-family: $family;
-  line-height: 130%;
 }
 
 :root {

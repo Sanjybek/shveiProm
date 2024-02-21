@@ -1,0 +1,31 @@
+@import '../../variables/variables.scss';
+.button {
+  width: 260px;
+  height: 75px;
+  background-color: var(--colorBlack);
+  border-radius: 6px;
+  color: var(--colorWhite);
+  cursor: pointer;
+  &:hover {
+    background-color: var(--colorOrange);
+    transition: 1s;
+  }
+}
+
+@media (max-width: $tablet992) {
+  .container {
+    max-width: $tablet930;
+  }
+  .button {
+    width: 200px;
+    height: 60px;
+    background-color: var(--colorBlack);
+    border-radius: 6px;
+    color: var(--colorWhite);
+    cursor: pointer;
+    &:hover {
+      background-color: var(--colorOrange);
+      transition: 1s;
+    }
+  }
+}

@@ -1,12 +1,12 @@
-@import '../../variables/variables.module.scss';
+@import '../../variables/variables.scss';
 
 .container {
   max-width: $desctop;
   padding: 0 5px;
   margin: 0 auto;
 }
+
 .footer {
-  // padding-top: 30px;
   margin-top: 60px;
   display: flex;
   height: 120px;
@@ -23,5 +23,25 @@
     display: flex;
     align-items: center;
     @include font(24, 500);
+  }
+}
+@media (max-width: $desctop1200) {
+  .container {
+    max-width: $desctop1180;
+  }
+  .footer {
+    &__location_tel {
+      @include font(23, 500);
+    }
+  }
+}
+@media (max-width: $tablet992) {
+  .container {
+    max-width: $tablet930;
+  }
+  .footer {
+    &__location_tel {
+      @include font(20, 500);
+    }
   }
 }

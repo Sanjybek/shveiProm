@@ -1,9 +1,11 @@
-@import '../../variables/variables.module.scss';
+@import '../../variables/variables.scss';
+
 .container {
   max-width: $desctop;
   margin: 0 auto;
   padding: 0 5px;
 }
+
 .pictures {
   text-align: center;
   &__title {
@@ -32,5 +34,26 @@
     height: 420px;
     border-radius: 10px;
     object-fit: cover;
+  }
+}
+
+@media (max-width: $tablet992) {
+  .container {
+    max-width: $tablet930;
+  }
+  .pictures {
+    text-align: center;
+    &__title {
+      margin-top: 70px;
+      @include font(46, 500);
+      padding-bottom: 72px;
+    }
+
+    .pictures__block {
+      height: 700px;
+    }
+    .picture_2 {
+      height: 330px;
+    }
   }
 }

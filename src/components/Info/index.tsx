@@ -1,23 +1,24 @@
-import style from './style.module.scss';
+import './style.scss';
 import infoPicture from '../../picture/info_picture.png';
+import { InforPicture } from '../inforPicture';
 const Info = () => {
   return (
-    <section>
-      <div className={style.container}>
-        <div className={style.info}>
-          <div className={style.info__texts}>
-            <h3 className={style.info__title}>Почему мы?</h3>
-            <p className={style.info__text}>
+    <section className="information__section">
+      <div className="container">
+        <div className="information">
+          <div className="information__texts">
+            <h3 className="information__title">Почему мы?</h3>
+            <p className="information__text">
               Shvei prom - Швейная фабрика для производства брюк — это современное предприятие, специализирующееся на
               создании высококачественной одежды для мужчин, женщин и детей.
             </p>
-            <p className={style.info__text}>
+            <p className="information__text">
               Shvei prom - Швейная фабрика для производства брюк — это современное предприятие, специализирующееся на
               создании высококачественной одежды для мужчин, женщин и детей.
             </p>
           </div>
-          <div className={style.info__picture}>
-            <img src={infoPicture} className={style.picture} alt="" />
+          <div className="information__picture">
+            <InforPicture src={infoPicture} className="picture" alt="" />
           </div>
         </div>
       </div>
