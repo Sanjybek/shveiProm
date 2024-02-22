@@ -8,9 +8,9 @@ const Footer = () => {
     <footer id="Контакты">
       <div className="container">
         <nav className="footer">
-          <img src={svg} alt={svg} />
+          <img className="footer__logo" src={svg} alt={svg} />
           <div className="footer__block">
-            <a className="footer__location_tel" href="tel:+996703767088">
+            <a className="footer__location_tel" href="tel:+996703310147">
               <img src={phone} />
               +996 559 332 187
             </a>

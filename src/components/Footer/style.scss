@@ -45,3 +45,16 @@
     }
   }
 }
+@media (max-width: $tablet768) {
+  .container {
+    max-width: $tablet740;
+  }
+  .footer {
+    &__logo {
+      width: 130px;
+    }
+    &__location_tel {
+      @include font(18, 500);
+    }
+  }
+}

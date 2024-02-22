@@ -57,3 +57,19 @@
     }
   }
 }
+@media (max-width: $tablet768) {
+  .container {
+    max-width: $tablet740;
+  }
+  .pictures {
+    &__grid {
+      grid-template-columns: none;
+    }
+    &__second_grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .pictures__block {
+      height: 0px;
+    }
+  }
+}

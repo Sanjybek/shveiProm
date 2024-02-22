@@ -63,8 +63,6 @@
     &:hover {
       background-color: var(--colorOrange);
       transition: 1s;
-      max-width: 400px;
-      height: 320px;
     }
   }
   &__second_text {
@@ -147,6 +145,32 @@
     }
     &__text {
       @include font(22, 500);
+    }
+  }
+}
+@media (max-width: $tablet768) {
+  .container {
+    max-width: $tablet740;
+  }
+  .info {
+    &__card {
+      padding-top: 40px;
+    }
+    &__title {
+      @include font(40, 500);
+    }
+    &__picture_min {
+      height: 280px;
+    }
+    &__text {
+      @include font(20, 500);
+    }
+    &__picture {
+      height: 280px;
+    }
+    &__second_card {
+      margin-top: 20px;
+      height: auto;
     }
   }
 }

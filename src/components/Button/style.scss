@@ -29,3 +29,8 @@
     }
   }
 }
+@media (max-width: $tablet768) {
+  .container {
+    max-width: $tablet740;
+  }
+}

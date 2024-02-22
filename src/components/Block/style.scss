@@ -67,3 +67,23 @@
     }
   }
 }
+@media (max-width: $tablet768) {
+  .section__block {
+    height: 300px;
+  }
+
+  .container {
+    max-width: $tablet740;
+  }
+  .block1 {
+    height: 300px;
+    justify-content: center;
+
+    &__title {
+      @include font(33, 500);
+    }
+    &__text {
+      @include font(16, 400);
+    }
+  }
+}
