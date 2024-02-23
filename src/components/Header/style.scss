@@ -1,0 +1,190 @@
+@import '../../variables/variables.scss';
+.headers {
+  padding-top: 10px;
+}
+
+.container {
+  max-width: $desctop;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 119px;
+
+  &__block {
+    display: flex;
+    gap: 45px;
+  }
+
+  &__link {
+    @include font(22, 500);
+  }
+
+  &__icon {
+    width: 160px;
+  }
+}
+.active {
+  color: var(--colorOrange);
+}
+.burger {
+  display: none;
+
+  &__btn {
+    position: relative;
+    display: inline-block;
+    z-index: 9999;
+    width: 50px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: var(--colorBlack);
+    transition: 0.6s;
+  }
+
+  &__btn::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: var(--colorBlack);
+    top: -10px;
+    left: 0;
+    transition: 0.6s;
+  }
+
+  &__btn::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: var(--colorBlack);
+    bottom: -10px;
+    left: 0;
+    transition: 0.6s;
+  }
+
+  #burger:checked + .burger__btn {
+    background-color: white;
+  }
+
+  #burger:checked + .burger__btn::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  #burger:checked + .burger__btn::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+
+  &__nav {
+    position: absolute;
+    background-color: white;
+    left: 0px;
+    gap: 15px;
+    top: -800px;
+    width: 100%;
+    padding: 27px;
+    transition: 0.6s;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    transition: 0.6s;
+  }
+
+  &__icon {
+    width: 150px;
+  }
+
+  &__link {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  #burger:checked ~ .burger__nav {
+    top: 0px;
+  }
+}
+@media (max-width: $tablet992) {
+  .headers {
+    height: 120px;
+  }
+
+  .container {
+    max-width: $tablet930;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 119px;
+
+    &__block {
+      display: flex;
+      gap: 45px;
+    }
+
+    &__link {
+      @include font(20, 500);
+    }
+  }
+}
+
+@media (max-width: $tablet768) {
+  .container {
+    max-width: $tablet768;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 119px;
+
+    &__block {
+      display: flex;
+      gap: 20px;
+    }
+
+    &__link {
+      @include font(20, 500);
+    }
+
+    &__icon {
+      width: 130px;
+    }
+  }
+}
+@media (max-width: $tablet650) {
+  .container {
+    max-width: $tablet630;
+  }
+
+  .header {
+    &__link {
+      @include font(24, 500);
+    }
+
+    &__block {
+      display: none;
+    }
+
+    &__icon {
+      width: 130px;
+    }
+  }
+
+  .burger {
+    display: block;
+  }
+}

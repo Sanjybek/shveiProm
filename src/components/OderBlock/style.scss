@@ -1,0 +1,100 @@
+@import '../../variables/variables.scss';
+.ordersection {
+  margin-top: 80px;
+  background: url('../../picture/fon2.png') no-repeat center/cover;
+  height: 535px;
+  margin-bottom: 30px;
+}
+
+.container {
+  max-width: $desctop;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-top: 95px;
+
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    row-gap: 23px;
+    max-width: 600px;
+  }
+
+  &__title {
+    @include font(45, 500);
+  }
+
+  &__text {
+    @include font(25, 400);
+  }
+}
+@media (max-width: $desctop1200) {
+  .container {
+    max-width: $desctop1180;
+  }
+
+  .block {
+    &__title {
+      @include font(40, 500);
+    }
+
+    &__text {
+      @include font(25, 400);
+    }
+  }
+}
+@media (max-width: $tablet992) {
+  .container {
+    max-width: $tablet930;
+  }
+
+  .block {
+    &__title {
+      @include font(36, 500);
+    }
+
+    &__text {
+      @include font(18, 400);
+    }
+  }
+}
+@media (max-width: $tablet768) {
+  .container {
+    max-width: $tablet740;
+  }
+
+  .ordersection {
+    margin-top: 80px;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+
+  .block {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__texts {
+      row-gap: 23px;
+      max-width: 600px;
+    }
+  }
+}
+@media (max-width: $tablet480) {
+  .container {
+    max-width: $tablet450;
+  }
+
+  .ordersection {
+    height: 350px;
+    color: var(--colorWhite);
+  }
+}

@@ -1,0 +1,82 @@
+@import '../../variables/variables.scss';
+
+.container {
+  max-width: $desctop;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+.footer {
+  margin-top: 60px;
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: end;
+    align-items: end;
+  }
+
+  &__location_tel {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    @include font(24, 500);
+  }
+}
+@media (max-width: $desctop1200) {
+  .container {
+    max-width: $desctop1180;
+  }
+
+  .footer {
+    &__location_tel {
+      @include font(23, 500);
+    }
+  }
+}
+@media (max-width: $tablet992) {
+  .container {
+    max-width: $tablet930;
+  }
+
+  .footer {
+    &__location_tel {
+      @include font(20, 500);
+    }
+  }
+}
+@media (max-width: $tablet768) {
+  .container {
+    max-width: $tablet740;
+  }
+
+  .footer {
+    &__logo {
+      width: 130px;
+    }
+
+    &__location_tel {
+      @include font(18, 500);
+    }
+  }
+}
+
+@media (max-width: $tablet480) {
+  .container {
+    max-width: $tablet450;
+  }
+
+  .footer {
+    &__logo {
+      width: 110px;
+    }
+
+    &__location_tel {
+      @include font(16, 500);
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import '../variables/variables.scss';
+@media (max-width: $tablet650) {
+  .container {
+    max-width: $tablet630;
+  }
+
+  .fon {
+    background: url('../picture/main__fon.png') no-repeat center/cover;
+  }
+}

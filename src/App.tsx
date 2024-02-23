@@ -1,11 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { RouterProvider } from "react-router-dom";
+import { router } from "./pages/routers";
 
 function App() {
   return (
-    <div></div>
-  );
+    <RouterProvider router={router} />
+  )
 }
 
 export default App;
+
