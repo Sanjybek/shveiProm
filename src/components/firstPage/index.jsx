@@ -1,6 +1,7 @@
+import React from 'react';
 import '../../sass/components/_firstpage.scss';
-import picture_2 from '../../images/picture-2.svg';
-const FirstPage = () => {
+import picture_2 from '../../images/picture_1.jpeg';
+export const FirstPage = () => {
   return (
     <>
       <div className="main1">
@@ -13,10 +14,11 @@ const FirstPage = () => {
             Shvei prom - Швейная фабрика для производства брюк — это современное предприятие, специализирующееся на
             создании высококачественной одежды для мужчин, женщин и детей.
           </p>
-          <button className="description1__button1">Связаться</button>
+          <button className="description1__button1">
+            <a href="tel:+996703310147">Связаться</a>
+          </button>
         </div>
       </div>
     </>
   );
 };
-export default FirstPage;

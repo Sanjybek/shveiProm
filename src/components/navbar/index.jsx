@@ -1,32 +1,28 @@
 import '../../sass/components/_navbar.scss';
-import { Link } from 'react-router-dom';
-import picture1 from '../../images/picture-1.svg';
-import { useState } from 'react';
-const mainPage = '/';
-const Navbar = ({ toggleSideBar }) => {
+import picture1 from '../../images/picture_55 (2).svg';
+export const Navbar = ({ toggleSideBar, isOpen, closedSideBar }) => {
+  const links = [
+    { text: 'Про нас', href: '#Пронас' },
+    { text: 'Каталог', href: '#Каталог' },
+    { text: 'Технология', href: '#Технология' },
+    { text: 'Контакты', href: '#Контакты' },
+  ];
+  const buttonComponents = [1, 2, 3];
   return (
     <header className="header">
       <img className="logo" src={picture1} alt="#" />
       <nav className="navbar">
-        <Link to={mainPage} className="navbar__link">
-          Про нас
-        </Link>
-        <Link to={mainPage} className="navbar__link">
-          Каталог
-        </Link>
-        <Link to={mainPage} className="navbar__link">
-          Технология
-        </Link>
-        <Link to={mainPage} className="navbar__link">
-          Контакты
-        </Link>
+        {links.map((link, index) => (
+          <a key={index} href={link.href}>
+            {link.text}
+          </a>
+        ))}
         <div className="navbar__button" onClick={toggleSideBar}>
-          <div className="navbar__button__component"></div>
-          <div className="navbar__button__component"></div>
-          <div className="navbar__button__component"></div>
+          {buttonComponents.map((_, index) => (
+            <div key={index} className="navbar__button__component"></div>
+          ))}
         </div>
       </nav>
     </header>
   );
 };
-export default Navbar;

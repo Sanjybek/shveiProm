@@ -1,25 +1,24 @@
 import '../../sass/components/_sixthpage.scss';
-import rectangle_27 from '../../images/rectangle27.svg';
-import rectangle_28 from '../../images/Rectangle28.svg';
+import rectangle_27 from '../../images/Rectangle_27.jpeg';
+import rectangle_28 from '../../images/Rectangle_28.jpeg';
 
-const SixPage = () => {
+export const SixPage = () => {
+  const texts = [
+    'Shvei prom - Швейная фабрика для производства брюк — это современное предприятие, специализирующееся на создании высококачественной одежды для мужчин, женщин и детей.',
+    'Shvei prom - Швейная фабрика для производства брюк — это современное предприятие, специализирующееся на создании высококачественной одежды для мужчин, женщин и детей.',
+  ];
   return (
-    <div className="mainPage6">
+    <div id="Технология" className="mainPage6">
       <section className="container6">
-        <h3>Технология</h3>
+        <h3 className="h3_tag6">Технология</h3>
         <div className="main6">
           <article className="general6">
-            <div className="general__tag6">Технология</div>
-            <div className="general__parag6">
-              <p className="paragraph6">
-                Shvei prom - Швейная фабрика для производства брюк — это современное предприятие, специализирующееся на
-                создании высококачественной одежды для мужчин, женщин и детей.
+            <div className="general6__tag6">Технология</div>
+            {texts.map((text, index) => (
+              <p key={index} className="paragraph6">
+                {text}
               </p>
-              <p className="paragraph6">
-                Shvei prom - Швейная фабрика для производства брюк — это современное предприятие, специализирующееся на
-                создании высококачественной одежды для мужчин, женщин и детей.
-              </p>
-            </div>
+            ))}
           </article>
           <div className="forImage6">
             <img src={rectangle_27} alt="#" />
@@ -33,11 +32,14 @@ const SixPage = () => {
             Shvei prom - Швейная фабрика для производства брюк — это современное предприятие, специализирующееся на
             создании высококачественной одежды для мужчин, женщин и детей.
           </p>
-          <button className="table6__button6">Связатся</button>
+          <button className="table6__button6">
+            <a href="tel:+996703310147">Связатся</a>
+          </button>
         </section>
-        <img src={rectangle_28} alt="#" />
+        <div className="pictureLast">
+          <img src={rectangle_28} alt="#" />
+        </div>
       </div>
     </div>
   );
 };
-export default SixPage;

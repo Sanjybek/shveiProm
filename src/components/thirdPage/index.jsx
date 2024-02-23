@@ -1,10 +1,14 @@
 import '../../sass/components/_thirdpage.scss';
-import picture_4 from '../../images/picture-4.svg';
-import picture_5 from '../../images/picture-5.svg';
-import picture_6 from '../../images/picture-6.svg';
-import picture_7 from '../../images/picture-7.svg';
+import picture_4 from '../../images/picture_4.jpeg';
+import picture_5 from '../../images/picture_5.jpeg';
+import picture_6 from '../../images/picture_6.jpeg';
+import picture_7 from '../../images/picture_7.jpeg';
 
-const ThirdPage = () => {
+export const ThirdPage = () => {
+  const sections = [
+    { imageSrc: picture_5, text: 'Профессиональное планирование' },
+    { imageSrc: picture_6, text: 'Квалифицированные специалисты' },
+  ];
   return (
     <article className="container3">
       <h3 className="h3_tag_third">Наши премущества</h3>
@@ -15,18 +19,14 @@ const ThirdPage = () => {
           </div>
           <p className="text3">Подбираем ткань, фурнитуру вместе с вами</p>
         </section>
-        <section className="generate3">
-          <div className="generate3__image3">
-            <img src={picture_5} alt="#" />
-          </div>
-          <p className="text3">Профессиональное планирование</p>
-        </section>
-        <section className="generate3">
-          <div className="generate3__image3">
-            <img src={picture_6} alt="#" />
-          </div>
-          <p className="text3">Квалифицированные специалисты</p>
-        </section>
+        {sections.map((section, index) => (
+          <section key={index} className="generate3">
+            <div className="generate3__image3">
+              <img src={section.imageSrc} alt="#" />
+            </div>
+            <p className="text3">{section.text}</p>
+          </section>
+        ))}
         <section className="main3">
           <div className="main3__image3">
             <img src={picture_7} alt="#" />
@@ -37,4 +37,3 @@ const ThirdPage = () => {
     </article>
   );
 };
-export default ThirdPage;

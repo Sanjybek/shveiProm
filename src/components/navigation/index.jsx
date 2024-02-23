@@ -1,8 +1,8 @@
 import { Fragment, useState } from 'react';
-import Navbar from '../navbar';
-import SideBar from '../sideBar';
+import { Navbar } from '../navbar';
+import { SideBar } from '../sideBar';
 
-const Navigation = () => {
+export const Navigation = () => {
   const [showSideBar, setShowSideBar] = useState(false);
 
   const closedSideBar = () => {
@@ -19,4 +19,3 @@ const Navigation = () => {
     </Fragment>
   );
 };
-export default Navigation;

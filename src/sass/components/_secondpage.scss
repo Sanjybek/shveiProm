@@ -6,34 +6,31 @@
 }
 .main2 {
   margin: 70px;
-  @include flex-layout($align: center, $justify: space-around);
+  @include flex-layout($align: center, $justify: space-between);
 }
 .description2 {
   width: 485px;
-  height: 358px;
+  text-align: center;
   @include flex-layout($direction: column);
+  gap: 20px;
   &__text2 {
     color: var(--main-color);
     @include font-layout($font20, $weight400, $height130, $family-Manrope);
   }
   &__tag2 {
     color: var(--main-color);
-    @include font-layout($font40, $weight500, $height130, $family-Manrope);
+    @include font-layout($font40, $weight600, $height130, $family-Manrope);
   }
-}
-.description2 article {
-  height: 286px;
-  text-align: center;
 }
 .forImage2 {
   width: 750px;
   height: 532px;
-  border-radius: 10px;
 }
 .forImage2 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 @include breakpoint(medium) {
   .main2 {
@@ -41,32 +38,38 @@
   }
   .description2 {
     &__text2 {
-      @include font-layout($font14, $weight400, $height130, $family-Manrope);
+      @include font-layout($font16, $weight400, $height130, $family-Manrope);
     }
     &__tag2 {
       @include font-layout($font40, $weight500, $height130, $family-Manrope);
     }
   }
-  .description2 article {
-    height: 100px;
+  .description2 {
+    height: 100%;
     text-align: center;
   }
 }
-@include breakpoint(small) {
+@include breakpoint(smaller) {
+  .main2 {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .forImage2 {
+    width: 98%;
+    height: 400px;
+  }
   .description2 {
-    &__text2 {
-      @include font-layout($font10, $weight400, $height130, $family-Manrope);
-    }
+    width: 80%;
+    border: 1px solid black;
     &__tag2 {
-      @include font-layout($font20, $weight500, $height130, $family-Manrope);
+      @include font-layout($font30, $weight500, $height130, $family-Manrope);
     }
   }
 }
 @include breakpoint(large) {
   .description2 {
-    // &__text2 {
-    //   @include font-layout($font18, $weight400, $height130, $family-Manrope);
-    // }
+    height: 100%;
     &__tag2 {
       @include font-layout($font45, $weight500, $height130, $family-Manrope);
     }

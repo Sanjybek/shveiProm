@@ -1,16 +1,17 @@
-// @import '../../variables/index.scss';
 @import '../../sass/abstract/variables';
+@import '../abstract/mixins';
 
 .mainPage6 {
-  width: 1447px;
+  max-width: $useful-width;
 }
 .container6 {
-  max-width: 1300px;
   margin: 70px;
 }
-h3 {
+.h3_tag6 {
+  margin: 70px;
+  text-align: center;
   color: var(--main-color);
-  @include font-layout($font50, $weight500, $height130, $family-Manrope);
+  @include font-layout($font50, $weight600, $height130, $family-Manrope);
 }
 .main6 {
   display: flex;
@@ -19,23 +20,28 @@ h3 {
 }
 .general6 {
   width: 485px;
-  height: 358px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  column-gap: 20px;
-  &__parag6 {
-    color: var(--main-color);
-    @include font-layout($font20, $weight500, $height130, $family-Manrope);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
   &__tag6 {
     color: var(--main-color);
-    @include font-layout($font40, $weight500, $height130, $family-Manrope);
+    margin-bottom: 20px;
+    @include font-layout($font40, $weight600, $height130, $family-Manrope);
   }
+}
+.paragraph6 {
+  color: var(--main-color);
+  @include font-layout($font20, $weight500, $height130, $family-Manrope);
+}
+.forImage6 {
+  width: 751px;
+  height: 532px;
+}
+.forImage6 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .table6 {
   position: absolute;
@@ -44,7 +50,7 @@ h3 {
   width: 485px;
   height: 288px;
   text-align: center;
-  @include flex-layout($direction: column, $align: center);
+  @include flex-layout($direction: column, $align: center, $justify: space-between);
   color: var(--main-color);
   &__tag6 {
     @include font-layout($font40, $weight500, $height130, $family-Manrope);
@@ -66,4 +72,68 @@ h3 {
   position: relative;
   width: $all-width;
   height: 458px;
+}
+.pictureLast {
+  width: 100%;
+  height: 458px;
+}
+.pictureLast img {
+  width: 100%;
+  height: 100%;
+}
+@include breakpoint(medium) {
+  .h3_tag6 {
+    margin: 30px;
+    @include font-layout($font30, $weight700, $height130, $family-Manrope);
+  }
+  .main6 {
+    flex-direction: column-reverse;
+  }
+  .general6 {
+    border: 1px solid black;
+    width: 80%;
+    margin: 10px;
+    &__parag6 {
+      @include font-layout($font14, $weight400, $height130, $family-Manrope);
+    }
+    &__tag6 {
+      @include font-layout($font30, $weight600, $height130, $family-Manrope);
+    }
+  }
+  .container6 {
+    margin: 5px;
+  }
+  .forImage6 {
+    height: 300px;
+    width: 100%;
+  }
+  .table6 {
+    right: 10px;
+    width: 250px;
+    &__tag6 {
+      @include font-layout($font24, $weight600, $height130, $family-Manrope);
+    }
+    &__paragraph6 {
+      @include font-layout($font18, $weight400, $height130, $family-Manrope);
+    }
+    &__button6 {
+      width: 100px;
+      height: 30px;
+      @include font-layout($font18, $weight400, $height130, $family-Montserrat);
+    }
+  }
+}
+@include breakpoint(small) {
+  .h3_tag6 {
+    margin: 15px;
+    @include font-layout($font30, $weight700, $height130, $family-Manrope);
+  }
+  .general6 {
+    &__parag6 {
+      @include font-layout($font10, $weight400, $height130, $family-Manrope);
+    }
+    &__tag6 {
+      @include font-layout($font30, $weight600, $height130, $family-Manrope);
+    }
+  }
 }

@@ -2,39 +2,95 @@
 @import '../abstract/mixins';
 
 .container5 {
+  max-width: $useful-width;
   margin: 70px;
 }
 .general5 {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
-.rectangle_15 {
-  width: 641px;
+.forImage5 {
+  width: 720px;
   height: 744px;
-  margin-right: 20px;
-}
-.rectangle_15 img {
-  width: $all-width;
-  height: $all-height;
-  object-fit: cover;
   border-radius: 6px;
+}
+.forImage5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pict_1 {
+  width: 350px;
+  height: 362px;
+  border-radius: 6px;
+}
+.pict_1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .rectangle_25 {
   display: grid;
-  grid-template-columns: 311px 311px;
+  grid-template-columns: 350px 350px;
   grid-template-rows: 362px 362px;
   row-gap: 20px;
   column-gap: 20px;
-}
-.main5 {
-  width: 311px;
-  height: 362px;
-}
-.main5 img {
-  width: $all-width;
-  height: $all-height;
-  object-fit: cover;
+  margin-left: 20px;
 }
 .h3_tag4 {
   color: var(--main-color);
-  @include font-layout($font50, $weight500, $height130, $family-Manrope);
+  text-align: center;
+  margin-bottom: 60px;
+  @include font-layout($font50, $weight600, $height130, $family-Manrope);
+}
+@include breakpoint(large) {
+  .rectangle_25 {
+    grid-template-columns: 200px 200px;
+    column-gap: 10px;
+    margin-left: 10px;
+    column-gap: 10px;
+  }
+  .general5 {
+    justify-content: center;
+  }
+  .pict_1 {
+    width: 200px;
+    height: 362px;
+    border-radius: 6px;
+  }
+  .h3_tag4 {
+    @include font-layout($font45, $weight500, $height130, $family-Manrope);
+  }
+}
+@include breakpoint(medium) {
+  .rectangle_25 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+    margin-left: 10px;
+  }
+  .pict_1 {
+    width: 200px;
+    height: 177px;
+    border-radius: 6px;
+    gap: 10px;
+  }
+  .container5 {
+    margin: 5px;
+  }
+  .h3_tag4 {
+    margin: 30px;
+    @include font-layout($font30, $weight700, $height130, $family-Manrope);
+  }
+}
+@include breakpoint(small) {
+  .pict_1 {
+    width: 130px;
+  }
+  .h3_tag4 {
+    margin: 15px;
+    @include font-layout($font30, $weight700, $height130, $family-Manrope);
+  }
 }

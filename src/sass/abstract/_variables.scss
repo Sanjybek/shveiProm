@@ -2,12 +2,13 @@ $family-Manrope: 'Manrope', sans-serif;
 $family-Montserrat: 'Montserrat', sans-serif;
 $all-height: 100%;
 $all-width: 100%;
-$useful-width: 1400px;
+$useful-width: 1600px;
 
 :root {
   --main-color: rgb(30, 30, 30);
   --main-white: rgb(255, 255, 255);
   --pane-padding: 5px 42px;
+  --green-color: green;
 }
 
 @mixin font-layout($size, $weight, $height: normal, $family) {
@@ -34,8 +35,8 @@ $font45: 45px;
 $font35: 35px;
 $font24: 24px;
 $font33: 33px;
-// $font143: 143px;
-// $font23: 23px;
+$font30: 30px;
+$font16: 16px;
 $font10: 10px;
 $font14: 14px;
 
@@ -43,7 +44,7 @@ $weight600: 600;
 $weight500: 500;
 $weight400: 400;
 $weight300: 300;
-// $weight800: 800;
+$weight700: 700;
 
 // $height39: 39px;
 $height19: 19px;

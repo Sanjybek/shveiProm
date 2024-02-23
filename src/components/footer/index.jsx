@@ -1,25 +1,30 @@
 import '../../sass/components/_footer.scss';
-import first from '../../images/first.svg';
-import second from '../../images/second.svg';
-import third from '../../images/third.svg';
+import first from '../../images/picture_55 (2).svg';
+import second from '../../images/Frame_52.jpeg';
+import third from '../../images/Frame_53.jpeg';
 
-const Footer = () => {
+export const Footer = () => {
   return (
-    <section className="containerf">
-      <article className="forPicturef">
+    <section className="containerFooter">
+      <article className="forPictureFooter">
         <img src={first} alt="#" />
       </article>
-      <div className="mainf">
-        <article className="mainf__tagf">
-          <img src={second} alt="#" />
-          <a href="#">+996 559 332 187</a>
+      <div className="mainFoot">
+        <article className="mainFoot__tag">
+          <div className="mainFoot__image">
+            <img src={second} alt="#" />
+          </div>
+          <button className="mainFoot__button">
+            <a href="tel:+996703310147">+996703310147</a>
+          </button>
         </article>
-        <article className="mainf__tagf">
-          <img src={third} alt="#" />
-          <a href="#">Г. Бишкек, Ул. Переулок Лагерный</a>
+        <article className="mainFoot__tag">
+          <div className="mainFoot__image">
+            <img src={third} alt="#" />
+          </div>
+          <button className="mainFoot__button">Г. Бишкек, Ул. Переулок Лагерный</button>
         </article>
       </div>
     </section>
   );
 };
-export default Footer;

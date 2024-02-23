@@ -5,13 +5,12 @@
   max-width: $useful-width;
 }
 .container4 {
-  height: 280px;
   margin: 0px 70px 60px 70px;
-  @include flex-layout($justify: space-around);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
   gap: 20px;
 }
 .main4 {
-  width: 310px;
   height: $all-height;
   @include flex-layout($direction: column, $align: center);
   border-radius: 6px;
@@ -28,6 +27,7 @@
 }
 .mainTag4 {
   color: var(--main-white);
+  margin-bottom: 20px;
   @include font-layout($font20, $weight600, $height24, $family-Montserrat);
 }
 .picture4 {
@@ -50,10 +50,10 @@
   width: 485px;
   height: 288px;
   text-align: center;
-  @include flex-layout($direction: column, $align: center);
+  @include flex-layout($direction: column, $align: center, $justify: space-between);
   color: var(--main-color);
   &__tag4 {
-    @include font-layout($font40, $weight500, $height130, $family-Manrope);
+    @include font-layout($font40, $weight600, $height130, $family-Manrope);
   }
   &__paragraph4 {
     @include font-layout($font20, $weight500, $height130, $family-Manrope);
@@ -66,75 +66,31 @@
     background: var(--main-color);
     color: var(--main-white);
     @include font-layout($font20, $weight400, $height130, $family-Montserrat);
-  }
-}
-@include breakpoint(large) {
-  .main4 {
-    &__general4 {
-      padding: 10px;
-    }
-
-    &__description4 {
-      @include font-layout($font10, $weight400, $height19, $family-Manrope);
-    }
-  }
-  .mainTag4 {
-    @include font-layout($font14, $weight600, $height24, $family-Montserrat);
-  }
-}
-@include breakpoint(larger) {
-  .container4 {
-    display: flex;
-    flex-wrap: wrap;
-    height: 650px;
-  }
-  .main4 {
-    height: 280px;
+    cursor: pointer;
   }
 }
 @include breakpoint(medium) {
-  .container4 {
-    height: 300px;
-    margin: 0px;
-    height: 650px;
-  }
-  .main4 {
-    width: 200px;
-    height: 300px;
-    &__general4 {
-      padding: 5px;
-    }
-
-    &__description4 {
-      @include font-layout($font10, $weight300, $height19, $family-Manrope);
-    }
-  }
-  .mainTag4 {
-    @include font-layout($font14, $weight400, $height24, $family-Montserrat);
-  }
   .table4 {
-    left: 5px;
     width: 250px;
-    height: 400px;
+    left: 10px;
+    width: 250px;
     &__tag4 {
-      @include font-layout($font24, $weight500, $height130, $family-Manrope);
+      font-size: $font24;
     }
     &__paragraph4 {
-      @include font-layout($font18, $weight500, $height130, $family-Manrope);
+      font-size: $font18;
     }
     &__button4 {
       width: 100px;
       height: 30px;
-      @include font-layout($font18, $weight400, $height130, $family-Montserrat);
+      font-size: $font18;
     }
   }
 }
 @include breakpoint(small) {
-  .main4 {
-    width: 120px;
-  }
-  .mainTag4 {
-    @include font-layout($font10, $weight400, $height24, $family-Montserrat);
-    color: green;
+  .container4 {
+    margin: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
   }
 }
