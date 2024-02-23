@@ -1,8 +1,9 @@
 import { Fragment } from 'react';
-import '../../sass/components/_sidebar.scss';
-import picture1 from '../../images/picture_55 (2).svg';
+import '../../sass/component/_sidebar.scss';
+import picture1 from 'images/picture_55 (2).svg';
+import { SideBarType } from 'types';
 
-export const SideBar = ({ isOpen, closedSideBar }) => {
+export const SideBar = ({ isOpen, closedSideBar }: SideBarType) => {
   const styles = isOpen ? 'sidebar sidebar--open' : 'sidebar sidebar--closed';
   const links = [
     { text: 'Про нас', href: '#Пронас' },

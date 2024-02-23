@@ -1,9 +1,10 @@
-import rectangle1 from '../../images/Rectangle_15 (1).jpeg';
-import rectangle2 from '../../images/Rectangle_16 (1).jpeg';
-import rectangle3 from '../../images/Rectangle_17.jpeg';
-import rectangle4 from '../../images/Rectangle_18.jpeg';
-import rectangle5 from '../../images/Rectangle_19 (1).jpeg';
-import '../../sass/components/_fifthpage.scss';
+import rectangle1 from 'images/Rectangle_15 (1).jpeg';
+import rectangle2 from 'images/Rectangle_16 (1).jpeg';
+import rectangle3 from 'images/Rectangle_17.jpeg';
+import rectangle4 from 'images/Rectangle_18.jpeg';
+import rectangle5 from 'images/Rectangle_19 (1).jpeg';
+import '../../sass/component/_fifthpage.scss';
+
 const forLoop = [rectangle2, rectangle3, rectangle4, rectangle5];
 export const FifthPage = () => {
   return (

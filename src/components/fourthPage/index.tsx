@@ -1,9 +1,10 @@
-import '../../sass/components/_fourthpage.scss';
-import vector_1 from '../../images/frame_1.png';
-import vector_2 from '../../images/frame_2.png';
-import vector_3 from '../../images/frame_3.png';
-import vector_4 from '../../images/frame_4.png';
-import rectangle_1 from '../../images/vector.jpeg';
+// import 'sass/component/_fourthpage.scss';
+import '../../sass/component/_fourthpage.scss'
+import vector_1 from 'images/frame_1.png';
+import vector_2 from 'images/frame_2.png';
+import vector_3 from 'images/frame_3.png';
+import vector_4 from 'images/frame_4.png';
+import rectangle_1 from 'images/vector.jpeg';
 const data = [
   {
     image: vector_1,

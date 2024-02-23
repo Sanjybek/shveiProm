@@ -1,6 +1,7 @@
-import '../../sass/components/_sixthpage.scss';
-import rectangle_27 from '../../images/Rectangle_27.jpeg';
-import rectangle_28 from '../../images/Rectangle_28.jpeg';
+// import 'sass/component/_sixthpage.scss';
+import '../../sass/component/_sixthpage.scss';
+import rectangle_27 from 'images/Rectangle_27.jpeg';
+import rectangle_28 from 'images/Rectangle_28.jpeg';
 
 export const SixPage = () => {
   const texts = [

@@ -1,4 +1,5 @@
-import '../../sass/components/_seventhpage.scss';
+// import 'sass/component/_seventhpage.scss';
+import '../../sass/component/_seventhpage.scss'
 
 export const SeventhPage = () => {
   return (

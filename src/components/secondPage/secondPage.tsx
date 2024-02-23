@@ -1,5 +1,6 @@
-import '../../sass/components/_secondpage.scss';
-import pictire_3 from '../../images/picture_2.jpeg';
+// import 'sass/component/_secondpage.scss';
+import '../../sass/component/_secondpage.scss';
+import pictire_3 from 'images/picture_2.jpeg';
 
 const descriptions = [
   'Shvei prom - Швейная фабрика для производства брюк — это современное предприятие, специализирующееся на создании высококачественной одежды для мужчин, женщин и детей.',

@@ -1,7 +1,8 @@
-import '../../sass/components/_footer.scss';
-import first from '../../images/picture_55 (2).svg';
-import second from '../../images/Frame_52.jpeg';
-import third from '../../images/Frame_53.jpeg';
+// import 'sass/component/_footer.scss';
+import '../../sass/component/_footer.scss'
+import first from 'images/picture_55 (2).svg';
+import second from 'images/Frame_52.jpeg';
+import third from 'images/Frame_53.jpeg';
 
 export const Footer = () => {
   return (

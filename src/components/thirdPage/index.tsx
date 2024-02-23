@@ -1,8 +1,9 @@
-import '../../sass/components/_thirdpage.scss';
-import picture_4 from '../../images/picture_4.jpeg';
-import picture_5 from '../../images/picture_5.jpeg';
-import picture_6 from '../../images/picture_6.jpeg';
-import picture_7 from '../../images/picture_7.jpeg';
+// import 'sass/component/_thirdpage.scss';
+import '../../sass/component/_thirdpage.scss';
+import picture_4 from 'images/picture_4.jpeg';
+import picture_5 from 'images/picture_5.jpeg';
+import picture_6 from 'images/picture_6.jpeg';
+import picture_7 from 'images/picture_7.jpeg';
 
 export const ThirdPage = () => {
   const sections = [

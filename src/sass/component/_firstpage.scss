@@ -1,4 +1,5 @@
-@import '../../sass/abstract/variables';
+// @import 'sass/abstract/variables';
+@import '../abstract/variables';
 @import '../abstract/mixins';
 .main1 {
   max-width: $useful-width;

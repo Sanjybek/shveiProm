@@ -1,6 +1,9 @@
-import '../../sass/components/_navbar.scss';
-import picture1 from '../../images/picture_55 (2).svg';
-export const Navbar = ({ toggleSideBar, isOpen, closedSideBar }) => {
+// import 'sass/component/_navbar.scss';
+import '../../sass/component/_navbar.scss';
+import picture1 from 'images/picture_55 (2).svg';
+import { NavbarType } from 'types';
+
+export const Navbar = ({ toggleSideBar }: NavbarType) => {
   const links = [
     { text: 'Про нас', href: '#Пронас' },
     { text: 'Каталог', href: '#Каталог' },
