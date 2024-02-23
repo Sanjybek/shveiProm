@@ -1,6 +1,5 @@
 @import '../../variables/variables.scss';
 .headers {
-  // height: 160px;
   padding-top: 10px;
 }
 
@@ -11,19 +10,20 @@
 }
 
 .header {
-  // height: 150px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 119px;
+
   &__block {
     display: flex;
     gap: 45px;
   }
+
   &__link {
     @include font(22, 500);
   }
+
   &__icon {
     width: 160px;
   }
@@ -33,46 +33,56 @@
 }
 .burger {
   display: none;
+
   &__btn {
     position: relative;
     display: inline-block;
     z-index: 9999;
-    width: 40px;
-    height: 3px;
+    width: 50px;
+    height: 5px;
+    border-radius: 3px;
     background-color: var(--colorBlack);
     transition: 0.6s;
   }
+
   &__btn::before {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 3px;
+    width: 50px;
+    height: 5px;
+    border-radius: 3px;
     background-color: var(--colorBlack);
     top: -10px;
     left: 0;
     transition: 0.6s;
   }
+
   &__btn::after {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 3px;
+    width: 50px;
+    height: 5px;
+    border-radius: 3px;
     background-color: var(--colorBlack);
     bottom: -10px;
     left: 0;
     transition: 0.6s;
   }
+
   #burger:checked + .burger__btn {
     background-color: white;
   }
+
   #burger:checked + .burger__btn::before {
     transform: rotate(45deg);
     top: 0;
   }
+
   #burger:checked + .burger__btn::after {
     transform: rotate(-45deg);
     bottom: 0;
   }
+
   &__nav {
     position: absolute;
     background-color: white;
@@ -84,17 +94,11 @@
     transition: 0.6s;
     display: flex;
     flex-direction: column;
-    // height: 400px;
-    border-radius: 0px 30px 30px 0px;
-
-    // position: absolute;
-    // background-color: var(--dark);
-    // left: 0;
-    // top: -200px;
     width: 100%;
     padding: 20px;
     transition: 0.6s;
   }
+
   &__icon {
     width: 150px;
   }
@@ -105,6 +109,7 @@
     font-size: 24px;
     margin-bottom: 20px;
   }
+
   #burger:checked ~ .burger__nav {
     top: 0px;
   }
@@ -113,18 +118,22 @@
   .headers {
     height: 120px;
   }
+
   .container {
     max-width: $tablet930;
   }
+
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 119px;
+
     &__block {
       display: flex;
       gap: 45px;
     }
+
     &__link {
       @include font(20, 500);
     }
@@ -135,18 +144,22 @@
   .container {
     max-width: $tablet768;
   }
+
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 119px;
+
     &__block {
       display: flex;
       gap: 20px;
     }
+
     &__link {
       @include font(20, 500);
     }
+
     &__icon {
       width: 130px;
     }
@@ -156,17 +169,21 @@
   .container {
     max-width: $tablet630;
   }
+
   .header {
     &__link {
       @include font(24, 500);
     }
+
     &__block {
       display: none;
     }
+
     &__icon {
       width: 130px;
     }
   }
+
   .burger {
     display: block;
   }

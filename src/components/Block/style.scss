@@ -17,6 +17,7 @@
   height: 535px;
   display: flex;
   align-items: center;
+
   &__texts {
     display: flex;
     flex-direction: column;
@@ -25,9 +26,11 @@
     row-gap: 23px;
     max-width: 600px;
   }
+
   &__title {
     @include font(45, 500);
   }
+
   &__text {
     @include font(25, 400);
   }
@@ -36,12 +39,15 @@
   .section__block {
     height: 400px;
   }
+
   .container {
     max-width: $desctop1180;
   }
+
   .section__block {
     height: 500px;
   }
+
   .block1 {
     &__title {
       @include font(40, 500);
@@ -55,9 +61,11 @@
   .container {
     max-width: $tablet930;
   }
+
   .section__block {
     height: 450px;
   }
+
   .block1 {
     &__title {
       @include font(36, 500);
@@ -75,6 +83,7 @@
   .container {
     max-width: $tablet740;
   }
+
   .block1 {
     height: 300px;
     justify-content: center;
@@ -85,5 +94,15 @@
     &__text {
       @include font(16, 400);
     }
+  }
+}
+@media (max-width: $tablet480) {
+  .section__block {
+    height: 350px;
+    color: var(--colorWhite);
+  }
+
+  .container {
+    max-width: $tablet450;
   }
 }

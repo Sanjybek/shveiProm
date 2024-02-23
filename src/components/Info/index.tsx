@@ -6,7 +6,7 @@ const Info = () => {
     <section className="information__section">
       <div className="container">
         <div className="information">
-          <div className="information__texts">
+          <div className="information__texts ">
             <h3 className="information__title">Почему мы?</h3>
             <p className="information__text">
               Shvei prom - Швейная фабрика для производства брюк — это современное предприятие, специализирующееся на

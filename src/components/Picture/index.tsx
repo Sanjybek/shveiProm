@@ -13,11 +13,11 @@ const Picture = () => {
           <h3 className="pictures__title">Каталог</h3>
           <div className="pictures__grid ">
             <div className="pictures__block">
-              <img className="picture" src={image1} alt="" />
+              <img className="picture" src={image1} />
             </div>
-            <div className="pictures__grid pictures__second_grid ">
+            <div className="pictures__grid pictures__second_grid">
               {images.map((image, index) => (
-                <img key={index} className="picture_2" src={image} alt="" />
+                <img key={index} className="picture_2" src={image} />
               ))}
             </div>
           </div>
