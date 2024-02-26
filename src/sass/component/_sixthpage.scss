@@ -5,10 +5,10 @@
   max-width: $useful-width;
 }
 .container6 {
-  margin: 70px;
+  margin: 60px 70px 60px 70px;
 }
 .h3_tag6 {
-  margin: 70px;
+  margin-bottom: 65px;
   text-align: center;
   color: var(--main-color);
   @include font-layout($font50, $weight600, $height130, $family-Manrope);
@@ -16,17 +16,16 @@
 .main6 {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .general6 {
   width: 485px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-align: center;
+  gap: 22px;
+  padding-top: 77px;
   &__tag6 {
     color: var(--main-color);
-    margin-bottom: 20px;
     @include font-layout($font40, $weight600, $height130, $family-Manrope);
   }
 }
@@ -45,8 +44,8 @@
 }
 .table6 {
   position: absolute;
-  right: 70px;
-  top: 80px;
+  right: 63px;
+  top: 85px;
   width: 485px;
   height: 288px;
   text-align: center;
@@ -70,16 +69,16 @@
 }
 .picture6 {
   position: relative;
-  width: $all-width;
+  width: 100%;
   height: 458px;
 }
 .pictureLast {
-  width: 100%;
   height: 458px;
 }
 .pictureLast img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 @include breakpoint(medium) {
   .h3_tag6 {
@@ -91,7 +90,7 @@
   }
   .general6 {
     border: 1px solid black;
-    width: 80%;
+    width: 98%;
     margin: 10px;
     &__parag6 {
       @include font-layout($font14, $weight400, $height130, $family-Manrope);
@@ -135,5 +134,10 @@
     &__tag6 {
       @include font-layout($font30, $weight600, $height130, $family-Manrope);
     }
+  }
+}
+@include breakpoint(large) {
+  .general6 {
+    padding-top: 0px;
   }
 }

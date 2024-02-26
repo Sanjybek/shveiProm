@@ -7,17 +7,23 @@
 .container4 {
   margin: 0px 70px 60px 70px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: 20px;
 }
 .main4 {
   height: $all-height;
-  @include flex-layout($direction: column, $align: center);
   border-radius: 6px;
   background: var(--main-color);
   text-align: center;
   &__general4 {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  &__general4 img {
+    padding-bottom: 10px;
   }
 
   &__description4 {
@@ -25,9 +31,16 @@
     @include font-layout($font14, $weight400, $height19, $family-Manrope);
   }
 }
+.smallImage {
+  width: 50px;
+  height: 50px;
+}
+.smallImage img {
+  width: 100%;
+  height: 100%;
+}
 .mainTag4 {
   color: var(--main-white);
-  margin-bottom: 20px;
   @include font-layout($font20, $weight600, $height24, $family-Montserrat);
 }
 .picture4 {
@@ -46,7 +59,7 @@
 .table4 {
   position: absolute;
   left: 70px;
-  top: 80px;
+  top: 84px;
   width: 485px;
   height: 288px;
   text-align: center;

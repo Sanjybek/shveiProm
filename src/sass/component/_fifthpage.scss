@@ -3,7 +3,7 @@
 
 .container5 {
   max-width: $useful-width;
-  margin: 70px;
+  margin: 60px 70px 0px 70px;
 }
 .general5 {
   display: flex;
@@ -11,7 +11,7 @@
   justify-content: space-between;
 }
 .forImage5 {
-  width: 720px;
+  width: 641px;
   height: 744px;
   border-radius: 6px;
 }
@@ -21,7 +21,7 @@
   object-fit: cover;
 }
 .pict_1 {
-  width: 350px;
+  width: 311px;
   height: 362px;
   border-radius: 6px;
 }
@@ -32,7 +32,7 @@
 }
 .rectangle_25 {
   display: grid;
-  grid-template-columns: 350px 350px;
+  grid-template-columns: 311px 311px;
   grid-template-rows: 362px 362px;
   row-gap: 20px;
   column-gap: 20px;
@@ -41,7 +41,7 @@
 .h3_tag4 {
   color: var(--main-color);
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 65px;
   @include font-layout($font50, $weight600, $height130, $family-Manrope);
 }
 @include breakpoint(large) {

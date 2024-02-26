@@ -4,11 +4,11 @@
 .container7 {
   max-width: $useful-width;
   text-align: center;
-  padding: 70px;
+  padding: 60px 70px 70px 70px;
 }
 .h3_tag7 {
   color: var(--main-color);
-  margin-bottom: 60px;
+  margin-bottom: 55px;
   @include font-layout($font50, $weight700, $height130, $family-Manrope);
 }
 .main7 {

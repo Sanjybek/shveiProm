@@ -10,7 +10,7 @@
 .h3_tag_third {
   color: var(--main-color);
   @include font-layout($font50, $weight600, $height130, $family-Manrope);
-  margin-bottom: 60px;
+  margin-bottom: 65px;
 }
 .forBody3 {
   @include flex-layout($justify: space-between);
@@ -18,7 +18,7 @@
 }
 .main3 {
   width: 340px;
-  margin-top: 260px;
+  margin-top: 255px;
   text-align: center;
   &__image3 {
     width: 100%;

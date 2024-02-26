@@ -1,5 +1,5 @@
 // import 'sass/component/_fourthpage.scss';
-import '../../sass/component/_fourthpage.scss'
+import '../../sass/component/_fourthpage.scss';
 import vector_1 from 'images/frame_1.png';
 import vector_2 from 'images/frame_2.png';
 import vector_3 from 'images/frame_3.png';
@@ -39,7 +39,9 @@ export const FourthPage = () => {
         {data.map((item, index) => (
           <section className="main4" key={index}>
             <div className="main4__general4">
-              <img src={item.image} alt="#" />
+              <div className="smallImage">
+                <img src={item.image} alt="#" />
+              </div>
               <div className="mainTag4">{item.title}</div>
               <p className="main4__description4">{item.description}</p>
             </div>

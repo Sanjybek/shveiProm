@@ -1,4 +1,3 @@
-// import 'sass/component/_secondpage.scss';
 import '../../sass/component/_secondpage.scss';
 import pictire_3 from 'images/picture_2.jpeg';
 

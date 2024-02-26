@@ -18,12 +18,13 @@
     "baseUrl": "./src",
     "paths": {
       "src/*": ["./src/*"],
-      // "components/*": ["./src/components/*"],
-      "images/*": ["./src/images/*"],
-      "sass/*": ["./src/sass/*"],
-      "page/*": ["./src/page/*"],
-      "types/*": ["./src/types/*"]
+      "@components/*": ["./components/*"],
+      "@images/*": ["./images/*"],
+      "@sass/*": ["./sass/*"],
+      "@page/*": ["./page/*"],
+      "@types/*": ["./types/*"]
     }
   },
-  "include": ["src"]
+  // "include": ["src"]
+  "exclude": ["node_modules"]
 }

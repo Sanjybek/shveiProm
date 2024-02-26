@@ -19,10 +19,11 @@
 .mainFoot {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  text-align: end;
+  align-items: flex-end;
+  margin-top: 10px;
   &__tag {
     display: flex;
+    // gap: 10px;
   }
   &__image {
     width: 40px;

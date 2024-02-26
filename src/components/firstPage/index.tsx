@@ -1,5 +1,4 @@
-// import 'sass/component/_firstpage.scss';
-import '../../sass/component/_firstpage.scss'
+import '../../sass/component/_firstpage.scss';
 import picture_2 from 'images/picture_1.jpeg';
 export const FirstPage = () => {
   return (
