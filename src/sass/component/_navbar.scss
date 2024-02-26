@@ -1,0 +1,57 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+.header {
+  max-width: $useful-width;
+  height: 103.31px;
+  margin: 20px 70px 0px 70px;
+  @include flex-layout($justify: space-between, $align: center);
+  @include breakpoint(medium) {
+    margin: 5px;
+  }
+}
+
+.navbar {
+  height: 25px;
+  @include flex-layout($justify: space-around);
+  gap: 50px;
+  &__button {
+    display: none;
+
+    @include breakpoint(medium) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+      background-color: rgb(246, 239, 239);
+
+      &__component {
+        display: none;
+
+        @include breakpoint(medium) {
+          display: block;
+          height: 5px;
+          width: 100%;
+          background-color: #333;
+        }
+      }
+    }
+  }
+}
+
+.navbar a {
+  color: var(--main-color);
+  @include font-layout($font18, $weight600, $height25, $family-Manrope);
+  text-decoration: none;
+  transition: 0.3s;
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+.navbar a:hover {
+  color: var(--green-color);
+}

@@ -1,0 +1,97 @@
+// @import 'sass/abstract/variables';
+@import '../abstract/variables';
+@import '../abstract/mixins';
+.main1 {
+  max-width: $useful-width;
+  margin: 0px 70px;
+  @include flex-layout($justify: space-between);
+}
+.picture1 {
+  width: 690px;
+  height: 745px;
+}
+.picture1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.description1 {
+  @include flex-layout($justify: flex-start, $align: center, $direction: column);
+  margin-top: 130px;
+  width: 597px;
+  gap: 20px;
+  &__parag1 {
+    width: $all-width;
+    @include flex-layout($justify: flex-start, $align: flex-start);
+    color: var(--main-color);
+    @include font-layout($font20, $weight500, $height130, $family-Manrope);
+    text-align: center;
+    margin-bottom: 22px;
+  }
+  &__button1 {
+    width: 220px;
+    height: 66px;
+    @include flex-layout($justify: center, $align: center);
+    padding: 20px 10px 20px 10px;
+    border-radius: 6px;
+    background: var(--main-color);
+    color: var(--main-white);
+    @include font-layout($font20, $weight400, $height130, $family-Montserrat);
+    cursor: pointer;
+  }
+}
+.h3_tag {
+  color: rgb(30, 30, 30);
+  @include font-layout($font53, $weight600, $height130, $family-Manrope);
+  text-align: center;
+  margin-bottom: 1px;
+}
+@include breakpoint(medium) {
+  .main1 {
+    margin: 5px;
+  }
+  .description1 {
+    &__parag1 {
+      font-size: $font20;
+      font-weight: $weight400;
+    }
+    &__button1 {
+      @include font-layout($font14, $weight400, $height130, $family-Montserrat);
+    }
+    &__button1 {
+      width: 150px;
+      height: 66px;
+    }
+  }
+  .h3_tag {
+    @include font-layout($font40, $weight500, $height130, $family-Manrope);
+  }
+}
+@include breakpoint(smaller) {
+  .h3_tag {
+    @include font-layout($font30, $weight500, $height130, $family-Manrope);
+  }
+  .main1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .picture1 {
+    width: 100%;
+    height: 360px;
+  }
+  .description1 {
+    margin-top: 10px;
+    width: 80%;
+    border: 1px solid black;
+    &__button1 {
+      width: 100px;
+      height: 30px;
+    }
+  }
+}
+@include breakpoint(large) {
+  .h3_tag {
+    font-size: $font45;
+  }
+}

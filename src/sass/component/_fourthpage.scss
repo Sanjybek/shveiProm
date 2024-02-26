@@ -1,0 +1,109 @@
+@import '../../sass/abstract/variables';
+@import '../abstract/mixins';
+
+.mainContainer4 {
+  max-width: $useful-width;
+}
+.container4 {
+  margin: 0px 70px 60px 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 20px;
+}
+.main4 {
+  height: $all-height;
+  border-radius: 6px;
+  background: var(--main-color);
+  text-align: center;
+  &__general4 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  &__general4 img {
+    padding-bottom: 10px;
+  }
+
+  &__description4 {
+    color: var(--main-white);
+    @include font-layout($font14, $weight400, $height19, $family-Manrope);
+  }
+}
+.smallImage {
+  width: 50px;
+  height: 50px;
+}
+.smallImage img {
+  width: 100%;
+  height: 100%;
+}
+.mainTag4 {
+  color: var(--main-white);
+  @include font-layout($font20, $weight600, $height24, $family-Montserrat);
+}
+.picture4 {
+  position: relative;
+  width: 100%;
+  height: 458px;
+}
+.forImage4 {
+  height: 100%;
+}
+.forImage4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.table4 {
+  position: absolute;
+  left: 70px;
+  top: 84px;
+  width: 485px;
+  height: 288px;
+  text-align: center;
+  @include flex-layout($direction: column, $align: center, $justify: space-between);
+  color: var(--main-color);
+  &__tag4 {
+    @include font-layout($font40, $weight600, $height130, $family-Manrope);
+  }
+  &__paragraph4 {
+    @include font-layout($font20, $weight500, $height130, $family-Manrope);
+  }
+  &__button4 {
+    width: 220px;
+    height: 66px;
+    @include flex-layout($justify: center, $align: center);
+    border-radius: 6px;
+    background: var(--main-color);
+    color: var(--main-white);
+    @include font-layout($font20, $weight400, $height130, $family-Montserrat);
+    cursor: pointer;
+  }
+}
+@include breakpoint(medium) {
+  .table4 {
+    width: 250px;
+    left: 10px;
+    width: 250px;
+    &__tag4 {
+      font-size: $font24;
+    }
+    &__paragraph4 {
+      font-size: $font18;
+    }
+    &__button4 {
+      width: 100px;
+      height: 30px;
+      font-size: $font18;
+    }
+  }
+}
+@include breakpoint(small) {
+  .container4 {
+    margin: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}

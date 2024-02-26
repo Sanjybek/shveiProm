@@ -1,0 +1,44 @@
+@import '../abstract/mixins';
+@import '../abstract/variables';
+.sidebar {
+  display: none;
+  height: 70%;
+
+  @include breakpoint(medium) {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 70%;
+    height: 60%;
+    transition: transform 0.3s ease-out;
+    background-color: #dddddd;
+  }
+  &--open {
+    transform: translateX(0);
+  }
+  &--closed {
+    transform: translateX(-100%);
+  }
+  &__list {
+    list-style: none;
+    font-size: $font24;
+    width: 100%;
+    &__item {
+      margin-bottom: 20px;
+    }
+  }
+  &__logo {
+    width: 100px;
+    height: 100px;
+  }
+}
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #777;
+  color: #333;
+}
